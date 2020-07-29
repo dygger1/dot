@@ -18,6 +18,8 @@ set $mod Mod4
 # font for window titles. ISO 10646 = Unicode
 font pango: M+ 1m, FontAwesome, Ionicons, 9
 
+default_border pixel
+
 # colors
 # from: https://gist.github.com/paulbdavis/4956329
 # client.focused #688060 #688060 #303030 #ffcfaf
@@ -47,7 +49,8 @@ exec_always --no-startup-id  setxkbmap "us,ru" ",winkeys" "grp:win_space_toggle,
 # wallpaper
 exec_always --no-startup-id nitrogen --restore &
 
-
+	#compositing
+	#exec_always --no-startup-id picom --inactive-dim 0.2 --no-fading-openclose --inactive-dim-fixed --config /dev/null
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -73,6 +76,10 @@ bindsym $mod+Shift+q kill
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 bindsym $mod+d exec dmenu_run -fn "M+ 1m light-12" -nb "#3c3b37" -nf "#7f9f7f" -sb "#dcdccc" -sf "#3c3b37"
+
+#Scratchpad
+bindsym $mod+Shift+grave move scratchpad
+bindsym $mod+grave scratchpad show
 
 # change focus
 bindsym $mod+j focus left
@@ -113,7 +120,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+z floating toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle

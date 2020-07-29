@@ -4,7 +4,7 @@
 #bold_is_bright = true
 #cell_height_scale = 1.0
 #cell_width_scale = 1.0
-#clickable_url = true
+clickable_url = true
 #dynamic_title = true
 font = Monospace 13
 fullscreen = true
@@ -17,7 +17,7 @@ fullscreen = true
 scrollback_lines = 10000
 search_wrap = true
 urgent_on_bell = true
-#hyperlinks = false
+hyperlinks = false
 
 # $BROWSER is used by default if set, with xdg-open as a fallback
 browser = xdg-open
@@ -51,7 +51,7 @@ foreground_bold = #ffffff
 background = #3f3f3f
 
 # 20% background transparency (requires a compositor)
-background = rgba(63, 63, 63, 0.8)
+# background = rgba(63, 63, 63, 0.8)
 
 # If unset, will reverse foreground and background
 highlight = #2f2f2f
