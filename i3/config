@@ -48,9 +48,11 @@ exec_always --no-startup-id  setxkbmap "us,ru" ",winkeys" "grp:win_space_toggle,
 
 # wallpaper
 exec_always --no-startup-id nitrogen --restore &
+	#exec --no-startup-id nitrogen --restore; sleep 1; picom -b
 
-	#compositing
-	#exec_always --no-startup-id picom --inactive-dim 0.2 --no-fading-openclose --inactive-dim-fixed --config /dev/null
+#compositing
+	#exec_always --no-startup-id picom --inactive-dim 0.2 --no-fading-openclose --inactive-dim-fixed --show-all-xerrors --config /home/user/.config/i3/picom.conf
+	#exec_always --no-startup-id picom -b --backend glx --inactive-dim 0.2 --no-fading-openclose --inactive-dim-fixed --config /dev/null
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
